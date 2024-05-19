@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20230802 20:47:08.334" rpa="false" schemaversion="3">
+<suite id="s1" name="Andia" source="C:\Users\Jordi\Desktop\SVV JORDI\Assignment 7\TEST\andia.robot">
+<kw name="Go to homepage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230802 20:47:08.575" level="INFO">Opening browser 'chrome' to base url 'https://www.mdu.se/en/malardalen-university/education/find-education'.</msg>
+<status status="PASS" starttime="20230802 20:47:08.574" endtime="20230802 20:47:13.013"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230802 20:47:13.013" endtime="20230802 20:47:13.138"/>
+</kw>
+<status status="PASS" starttime="20230802 20:47:08.574" endtime="20230802 20:47:13.138"/>
+</kw>
+<test id="s1-t1" name="Search for full time courses" line="37">
+<kw name="Search for Full Time Courses">
+<arg>Math</arg>
+<arg>${url}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=env-button--primary</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230802 20:47:13.144" level="INFO">Clicking element 'class=env-button--primary'.</msg>
+<status status="PASS" starttime="20230802 20:47:13.144" endtime="20230802 20:47:13.283"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230802 20:47:14.284" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230802 20:47:13.283" endtime="20230802 20:47:14.284"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=mdh-form__dropdown-button--filter</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230802 20:47:14.284" level="INFO">Clicking element 'class=mdh-form__dropdown-button--filter'.</msg>
+<status status="PASS" starttime="20230802 20:47:14.284" endtime="20230802 20:47:14.536"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=button_studypace</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230802 20:47:14.536" level="INFO">Clicking element 'id=button_studypace'.</msg>
+<status status="PASS" starttime="20230802 20:47:14.536" endtime="20230802 20:47:14.664"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//label[@for="studypace-100" and @class="mdh-form__checkbox--label" and text()="Full time"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230802 20:47:14.664" level="INFO">Clicking element '//label[@for="studypace-100" and @class="mdh-form__checkbox--label" and text()="Full time"]'.</msg>
+<status status="PASS" starttime="20230802 20:47:14.664" endtime="20230802 20:47:14.759"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=education-search-input</arg>
+<arg>${searchkey}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230802 20:47:14.759" level="INFO">Typing text 'Math' into text field 'id=education-search-input'.</msg>
+<status status="PASS" starttime="20230802 20:47:14.759" endtime="20230802 20:47:14.934"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=mdh-search-education__submit-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230802 20:47:14.934" level="INFO">Clicking element 'class=mdh-search-education__submit-button'.</msg>
+<status status="PASS" starttime="20230802 20:47:14.934" endtime="20230802 20:47:15.007"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${searchkey}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230802 20:47:15.007" endtime="20230802 20:47:15.029"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230802 20:47:20.029" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230802 20:47:15.029" endtime="20230802 20:47:20.029"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230802 20:47:20.029" endtime="20230802 20:47:22.200"/>
+</kw>
+<status status="PASS" starttime="20230802 20:47:13.144" endtime="20230802 20:47:22.200"/>
+</kw>
+<status status="PASS" starttime="20230802 20:47:13.144" endtime="20230802 20:47:22.200"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230802 20:47:22.200" endtime="20230802 20:47:22.200"/>
+</kw>
+<status status="PASS" starttime="20230802 20:47:08.336" endtime="20230802 20:47:22.200"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Andia">Andia</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
